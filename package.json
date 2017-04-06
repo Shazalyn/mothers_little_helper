@@ -1,0 +1,29 @@
+{
+  "name": "mothers_little_helper",
+  "version": "1.0.0",
+  "description": "new baby tracking app-eat feed go",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shazalyn/mothers_little_helper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shazalyn/mothers_little_helper/issues"
+  },
+  "homepage": "https://github.com/Shazalyn/mothers_little_helper#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "materialize-css": "^0.98.1",
+    "method-override": "^2.3.8",
+    "mustache-express": "^1.2.4",
+    "pg-promise": "^5.6.4"
+  }
+}
