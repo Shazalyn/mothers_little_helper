@@ -14,13 +14,15 @@
 }
 
 
-:hov
+/*:hov
 
-.cls
+.cls*/
 /*line above formula amount*/
 element.style {
     margin-bottom: 0px;
 }
+
+
 
 #index-banner > div > div.row > div:nth-child(2) > div:nth-child(3) > label{
       margin-bottom: 0px;

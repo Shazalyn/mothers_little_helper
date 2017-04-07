@@ -17,60 +17,51 @@
         <li><a href="#">Navbar Link</a></li>
       </ul>
 
-      <ul id="nav-mobile" class="side-nav">
+<!--       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Navbar Link</a></li>
       </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
+ --><!--       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+ -->    </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
       <h5 class="header center ">Record [childs name here] activity</h5>
-          <div class="input-field inline">
-          <input type="date" class="datepicker">
-<!--             <input id="email" type="email" class="validate">
- -->            <label for="date" data-error="wrong" data-success="right"></label>
-          </div>
 
 
 
 
  <div class="row">
-    <form class="col s4">
+    <form action="/activity" method="post">
+          <div class="input-field inline">
+          <input name= "go_date" type="date" class="datepicker">
+<!--             <input id="email" type="email" class="validate">
+ -->            <label for="date" data-error="wrong" data-success="right"></label>
+          </div><br>
 
-<!--           <form action="#">
-            <p>
-              <input name="group1" type="radio" id="test1" />
-              <label for="test1">pee</label>
-            </p>
-            <p>
-              <input name="group1" type="radio" id="test2" />
-              <label for="test2">poo</label>
-            </p>
-          </form>
- -->
-        <form action="#">
-        <h2>GO</h2>
+
+     <div class="col s4">
+
+        <h3>GO</h3>
           <p>
-               <input id="goTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
+               <input name="go_time" id="goTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
               <label for="goTimepicker">go change time: hour:min am/pm</label>
           </p>
           <p>
-            <input type="checkbox" id="pee" />
+            <input name="pee" type="checkbox" id="pee"  />
             <label for="pee">PEE</label>
           </p>
           <p>
-            <input type="checkbox" id="poo" checked="checked" />
+            <input name="poo" type="checkbox" id="poo" checked="checked" />
             <label for="poo">POO</label>
           </p>
-        </form>
+      </div>
 
         <div class="col s4">
           <!-- Promo Content 2 goes here -->
-          <h2>EAT</h2>
+          <h3>EAT</h3>
           <p>
-            <input id="eatTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
+            <input name="eat_time" id="eatTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
               <label for="eatTimepicker">eat time: hour:min am/pm</label>
           </p>
 <!--     <div class="row">
@@ -79,14 +70,14 @@
             <label for="test7">formula amount</label>
 
             <div class="row">
-              <input id="input_text" type="text" data-length="4" style="width: 50px;">
+              <input name="formula" id="input_text" type="text" data-length="4" style="width: 50px;">
               <label for="input_text">formula oz</label>
 <!--           </div>
  -->        </div>
 
           </p>
           <p>
-            <input type="checkbox" id="test8" checked="checked" />
+            <input name="milk" type="checkbox" id="test8" checked="checked" />
             <label for="test8">milk amount</label>
 
             <div class="row">
@@ -99,7 +90,7 @@
         </div>
 
         <div class="col s4">
-          <h2>SLEEP</h2>
+          <h3>SLEEP</h3>
 <!--             <input id="timepicker1">
  -->            <input type="time" class="timepicker" style="margin-bottom: 0px";>
               <label for="timepicker">sleep start: hour:min am/pm</label>
@@ -117,7 +108,7 @@
 
   </div>
 
-      <button class="btn waves-effect waves-light orange" type="submit" name="action"><a href="/login">update</a>
+      <button class="btn waves-effect waves-light orange" type="submit">log activity
       </button>
 
     </form>

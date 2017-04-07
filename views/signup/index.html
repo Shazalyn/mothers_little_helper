@@ -28,49 +28,32 @@
       <br><br>
       <h5 class="header center ">Sign up for Mother's Little Helper</h5>
  <div class="row">
-    <form class="col s12">
+
+    <form class="col s12" method="post" action="/signup">
 
       <div class="row">
-        <div class="input-field col s12">
-          <input placeholder="Email for Mother's Little Helper Account" id="email" type="email" class="validate">
+        <div class="input-field col s8">
+          <input name="email" id="inputEmail" type="email" class="validate">
           <label for="email">Email</label>
         </div>
       </div>
 
       <div class="row">
-        <div class="input-field col s12">
-          <input placeholder="create password" id="password" type="password" class="validate">
-          <label for="password">Password</label>
+        <div class="input-field col s8">
+          <input name="password" id="inputPassword" type="password" class="validate">
+          <label for="inputpassword">Password</label>
         </div>
       </div>
 
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="type parent's name here" id="parent_name" type="text" class="validate">
-          <label for="first_name">Parent Name</label>
-        </div>
-
-        <div class="input-field col s6">
-          <input placeholder="type child's first name here" id="child_name" type="text" class="validate">
-          <label for="last_name">Child's Name</label>
+        <div class="input-field col s8">
+          <input name="kid_name" id="kid_name" type="text" class="validate">
+          <label for="kid_name">Child's Name</label>
         </div>
       </div>
 
-      <div class="row">
-        <div class="input-field col s6">
-        <div class="input-field inline">
-          <input type="date" class="datepicker">
-<!--             <input id="email" type="email" class="validate">
- -->            <label for="date" data-error="wrong" data-success="right">Date</label>
-          </div>
-<!--           <input placeholder="MM/DD/YEAR" id="child_dob" type="text" class="validate">
-<!--  -->          <label for="first_name">Child's date of Birth</label>
- -->        </div>
 
-      </div>
+      <button class="btn waves-effect waves-light orange">Create Account</button>
 
-      <button class="btn waves-effect waves-light orange" type="submit" name="action"><a href="/login">Create Account</a>
-      </button>
 
     </form>
   </div>

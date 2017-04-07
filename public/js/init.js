@@ -4,6 +4,7 @@
     $('.button-collapse').sideNav();
     $("#timepicker1").timepicker();
 
+// val goTime = $("#goTimepicker").val();
     // $('.my-datepicker').datepicker([options])
 
   // $('.datepicker').pickadate({

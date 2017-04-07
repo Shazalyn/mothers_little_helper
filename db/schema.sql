@@ -1,11 +1,43 @@
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS child;
+DROP TABLE IF EXISTS child CASCADE;
+DROP TABLE IF EXISTS go CASCADE;
+DROP TABLE IF EXISTS eat CASCADE;
+DROP TABLE IF EXISTS sleep CASCADE;
 
-CREATE TABLE child()
 
-CREATE TABLE users (
+
+CREATE TABLE child (
   id SERIAL PRIMARY KEY,
-  email VARCHAR(255) UNIQUE,
-  password_digest VARCHAR(255)
-
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password_digest VARCHAR(255) NOT NULL,
+  kid_name VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE go(
+id SERIAL PRIMARY KEY,
+go_date VARCHAR(10) NOT NULL,
+go_time VARCHAR(10) NOT NULL,
+pee boolean,
+poo boolean,
+child_id INTEGER,
+FOREIGN KEY (child_id) REFERENCES child (id)
+);
+
+CREATE TABLE eat(
+id SERIAL PRIMARY KEY,
+eat_date VARCHAR NOT NULL,
+eat_time VARCHAR NOT NULL,
+formula INTEGER,
+milk INTEGER,
+child_id INTEGER,
+FOREIGN KEY (child_id) REFERENCES child (id)
+);
+
+CREATE TABLE sleep(
+id SERIAL PRIMARY KEY,
+sleep_date VARCHAR NOT NULL,
+sleep_start VARCHAR NOT NULL,
+sleep_end VARCHAR NOT NULL,
+child_id INTEGER,
+FOREIGN KEY (child_id) REFERENCES child (id)
+);
+
