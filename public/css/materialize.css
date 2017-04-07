@@ -2866,12 +2866,13 @@ ul.staggered-list li {
 }
 
 .page-footer {
-  padding-top: 20px;
-  background-color: #ee6e73;
+  padding-top: 0px;
+  background-color: #f9a825;
 }
 
 .page-footer .footer-copyright {
   overflow: hidden;
+  text-align: center;
   min-height: 50px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2879,10 +2880,10 @@ ul.staggered-list li {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 0px;
+  padding: 0px 0px;
   color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(51, 51, 51, 0.08);
-}
+/*  background-color: rgba(51, 51, 51, 0.08);
+*/}
 
 table, th, td {
   border: none;

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+// const timePicker = require('time-picker');
 const pgp = require('pg-promise')();
 const mustacheExpress = require('mustache-express');
 const methodOverride = require('method-override')
@@ -8,6 +9,7 @@ const bodyParser = require("body-parser");
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 const salt = bcrypt.genSalt(10);
+
 
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
@@ -25,7 +27,7 @@ app.use(session({
 }))
 
 /* Change this line! */
-var db = pgp('postgres://YOURNAME@localhost:5432/DATABASE_NAME');
+// var db = pgp('postgres://shannon@localhost:5432/DATABASE_NAME');
 
 app.get('/', function(req, res){
   if(req.session.user){
@@ -40,26 +42,33 @@ app.get('/', function(req, res){
   }
 });
 
-app.post('/login', function(req, res){
-  let data = req.body;
-  let auth_error = "Authorization Failed: Invalid email/password";
-
-  db
-    .one("SELECT * FROM users WHERE email = $1", [data.email])
-    .catch(function(){
-      res.send(auth_error);
-    })
-    .then(function(user){
-      bcrypt.compare(data.password, user.password_digest, function(err, cmp){
-        if(cmp){
-          req.session.user = user;
-          res.redirect("/");
-        } else {
-          res.send(auth_error);
-        }
-      });
-    });
+app.get('/login', function(req, res){
+  res.render('login/index');
 });
+
+app.get('/activity', function(req, res){
+  res.render('activity/index');
+});
+// app.post('/login', function(req, res){
+//   let data = req.body;
+//   let auth_error = "Authorization Failed: Invalid email/password";
+
+//   db
+//     .one("SELECT * FROM users WHERE email = $1", [data.email])
+//     .catch(function(){
+//       res.send(auth_error);
+//     })
+//     .then(function(user){
+//       bcrypt.compare(data.password, user.password_digest, function(err, cmp){
+//         if(cmp){
+//           req.session.user = user;
+//           res.redirect("/");
+//         } else {
+//           res.send(auth_error);
+//         }
+//       });
+//     });
+// });
 
 app.get('/signup', function(req, res){
   res.render('signup/index');
@@ -79,6 +88,7 @@ app.post('/signup', function(req, res){
       });
     });
 });
+
 
 app.put('/user', function(req, res){
   db

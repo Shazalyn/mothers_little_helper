@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Shazalyn/mothers_little_helper#readme",
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",

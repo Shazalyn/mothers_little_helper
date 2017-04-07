@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS child;
+
+CREATE TABLE child()
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) UNIQUE,
+  password_digest VARCHAR(255)
+
+);

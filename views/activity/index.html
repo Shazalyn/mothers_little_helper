@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>activity</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="yellow" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Mother's Little Helper</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h5 class="header center ">Record [childs name here] activity</h5>
+          <div class="input-field inline">
+          <input type="date" class="datepicker">
+<!--             <input id="email" type="email" class="validate">
+ -->            <label for="date" data-error="wrong" data-success="right"></label>
+          </div>
+
+
+
+
+ <div class="row">
+    <form class="col s4">
+
+<!--           <form action="#">
+            <p>
+              <input name="group1" type="radio" id="test1" />
+              <label for="test1">pee</label>
+            </p>
+            <p>
+              <input name="group1" type="radio" id="test2" />
+              <label for="test2">poo</label>
+            </p>
+          </form>
+ -->
+        <form action="#">
+        <h2>GO</h2>
+          <p>
+               <input id="goTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
+              <label for="goTimepicker">go change time: hour:min am/pm</label>
+          </p>
+          <p>
+            <input type="checkbox" id="pee" />
+            <label for="pee">PEE</label>
+          </p>
+          <p>
+            <input type="checkbox" id="poo" checked="checked" />
+            <label for="poo">POO</label>
+          </p>
+        </form>
+
+        <div class="col s4">
+          <!-- Promo Content 2 goes here -->
+          <h2>EAT</h2>
+          <p>
+            <input id="eatTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
+              <label for="eatTimepicker">eat time: hour:min am/pm</label>
+          </p>
+<!--     <div class="row">
+ -->      <p>
+            <input type="checkbox" id="test7" />
+            <label for="test7">formula amount</label>
+
+            <div class="row">
+              <input id="input_text" type="text" data-length="4" style="width: 50px;">
+              <label for="input_text">formula oz</label>
+<!--           </div>
+ -->        </div>
+
+          </p>
+          <p>
+            <input type="checkbox" id="test8" checked="checked" />
+            <label for="test8">milk amount</label>
+
+            <div class="row">
+            <input id="input_text" type="text" data-length="4" style="width: 50px;">
+<!--               <input id="input_text" type="text" data-length="3">
+ -->              <label for="input_text">milk oz</label>
+            </div>
+
+          </p>
+        </div>
+
+        <div class="col s4">
+          <h2>SLEEP</h2>
+<!--             <input id="timepicker1">
+ -->            <input type="time" class="timepicker" style="margin-bottom: 0px";>
+              <label for="timepicker">sleep start: hour:min am/pm</label>
+
+              <input id="timepicker2" type="time" class="timepicker" style="margin-bottom: 0px">
+              <label for="timepicker">sleep finish: hour:min am/pm</label>
+<!--           <div class="datepicker-here" data-timepicker="true" data-time-format='hh:ii aa'></div>
+ -->
+        </div>
+
+      </div>
+
+
+
+
+  </div>
+
+      <button class="btn waves-effect waves-light orange" type="submit" name="action"><a href="/login">update</a>
+      </button>
+
+    </form>
+  </div>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer yellow">
+    <div class="container">
+
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by SHAZA &copy 2017 with <a class="yellow darken-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>signup</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="yellow" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Mother's Little Helper</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h5 class="header center ">Sign up for Mother's Little Helper</h5>
+ <div class="row">
+    <form class="col s12">
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Email for Mother's Little Helper Account" id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="create password" id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="type parent's name here" id="parent_name" type="text" class="validate">
+          <label for="first_name">Parent Name</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input placeholder="type child's first name here" id="child_name" type="text" class="validate">
+          <label for="last_name">Child's Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+        <div class="input-field inline">
+          <input type="date" class="datepicker">
+<!--             <input id="email" type="email" class="validate">
+ -->            <label for="date" data-error="wrong" data-success="right">Date</label>
+          </div>
+<!--           <input placeholder="MM/DD/YEAR" id="child_dob" type="text" class="validate">
+<!--  -->          <label for="first_name">Child's date of Birth</label>
+ -->        </div>
+
+      </div>
+
+      <button class="btn waves-effect waves-light orange" type="submit" name="action"><a href="/login">Create Account</a>
+      </button>
+
+    </form>
+  </div>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer yellow">
+    <div class="container">
+
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by SHAZA &copy 2017 with <a class="yellow darken-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
