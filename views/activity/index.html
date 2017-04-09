@@ -34,7 +34,7 @@
  <div class="row">
     <form action="/activity" method="post">
           <div class="input-field inline">
-          <input name= "go_date" type="date" class="datepicker">
+          <input name= "day" id="day" type="date" class="datepicker">
 <!--             <input id="email" type="email" class="validate">
  -->            <label for="date" data-error="wrong" data-success="right"></label>
           </div><br>
@@ -58,44 +58,35 @@
       </div>
 
         <div class="col s4">
-          <!-- Promo Content 2 goes here -->
+
           <h3>EAT</h3>
           <p>
             <input name="eat_time" id="eatTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
-              <label for="eatTimepicker">eat time: hour:min am/pm</label>
+            <label for="eatTimepicker">eat time: hour:min am/pm</label>
           </p>
-<!--     <div class="row">
- -->      <p>
-            <input type="checkbox" id="test7" />
-            <label for="test7">formula amount</label>
 
+         <p>
             <div class="row">
-              <input name="formula" id="input_text" type="text" data-length="4" style="width: 50px;">
-              <label for="input_text">formula oz</label>
-<!--           </div>
- -->        </div>
-
-          </p>
-          <p>
-            <input name="milk" type="checkbox" id="test8" checked="checked" />
-            <label for="test8">milk amount</label>
-
-            <div class="row">
-            <input id="input_text" type="text" data-length="4" style="width: 50px;">
-<!--               <input id="input_text" type="text" data-length="3">
- -->              <label for="input_text">milk oz</label>
+              <input name="formula" id="input_formula" type="text" data-length="4" style="width: 50px;">
+              <label for="input_formula">formula oz</label>
             </div>
+          </p>
 
+          <p>
+            <div class="row">
+              <input  name ="milk" id="input_milk" type="text" data-length="4" style="width: 50px;">
+              <label for="input_milk">milk oz</label>
+            </div>
           </p>
         </div>
 
         <div class="col s4">
           <h3>SLEEP</h3>
 <!--             <input id="timepicker1">
- -->            <input type="time" class="timepicker" style="margin-bottom: 0px";>
+ -->            <input name="sleep_start" type="time" class="timepicker" style="margin-bottom: 0px";>
               <label for="timepicker">sleep start: hour:min am/pm</label>
 
-              <input id="timepicker2" type="time" class="timepicker" style="margin-bottom: 0px">
+              <input name="sleep_end" id="timepicker2" type="time" class="timepicker" style="margin-bottom: 0px">
               <label for="timepicker">sleep finish: hour:min am/pm</label>
 <!--           <div class="datepicker-here" data-timepicker="true" data-time-format='hh:ii aa'></div>
  -->

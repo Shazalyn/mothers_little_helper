@@ -97,14 +97,14 @@ app.post('/activity', function(req, res){
   let data = req.body;
   console.log("yeah");
   console.log("req.body:", data)
-    db.none(
-      "INSERT INTO go( go_date, go_time, pee, poo, child_id) VALUES($1, $2, $3, $4, $5)",
-      [data.go_date, data.go_time, data.pee, data.poo, data.child_id]
+    db.any(
+          "INSERT INTO eat(day, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
+          [data.day, data.eat_time, data.formula, data.milk,data.child_id]
     ).then(function(){
-        // db.none(
-        //   "INSERT INTO eat( go_date, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
-        //   [data.go_date, data.eat_time, data.formula, data.milk,data.child_id]
-        // ).then(function(){
+        db.none(
+          "INSERT INTO go( day, go_time, pee, poo, child_id) VALUES($1, $2, $3, $4, $5)",
+      [data.day, data.go_time, data.pee, data.poo, data.child_id]
+        ).then(function(){
         //    db.none(
         //   "INSERT INTO sleep( sleep_date, sleep_start, sleep_end, , child_id) VALUES($1, $2, $3, $4, $5)",
         //   [data.sleep_date, data.sleep_start, data.sleep_end, ,data.child_id]
@@ -117,7 +117,31 @@ app.post('/activity', function(req, res){
       res.send('data not accepted: ' + e);
     });
 });
+});
+// app.post('/activity', function(req, res){
+//   let data = req.body;
+//   console.log("food");
+//   console.log("req.body:", data)
+//     db.none(
+//       "INSERT INTO eat( eat_date, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
+//       [data.eat_date, data.eat_time, data.formula, data.milk, data.child_id]
+//     ).then(function(){
+//         // db.none(
+//         //   "INSERT INTO eat( go_date, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
+//         //   [data.go_date, data.eat_time, data.formula, data.milk,data.child_id]
+//         // ).then(function(){
+//         //    db.none(
+//         //   "INSERT INTO sleep( sleep_date, sleep_start, sleep_end, , child_id) VALUES($1, $2, $3, $4, $5)",
+//         //   [data.sleep_date, data.sleep_start, data.sleep_end, ,data.child_id]
+//         //     ).then(function(){
 
+// // .send('User created!');
+//       res.redirect("/activity")
+//     })
+//     .catch(function(e){
+//       res.send('data not accepted: ' + e);
+//     });
+// });
 app.put('/user', function(req, res){
   db
     .none("UPDATE users SET email = $1 WHERE email = $2",

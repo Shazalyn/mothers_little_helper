@@ -14,7 +14,7 @@ CREATE TABLE child (
 
 CREATE TABLE go(
 id SERIAL PRIMARY KEY,
-go_date VARCHAR(10) NOT NULL,
+day VARCHAR(10) NOT NULL,
 go_time VARCHAR(10) NOT NULL,
 pee boolean,
 poo boolean,
@@ -24,19 +24,19 @@ FOREIGN KEY (child_id) REFERENCES child (id)
 
 CREATE TABLE eat(
 id SERIAL PRIMARY KEY,
-eat_date VARCHAR NOT NULL,
-eat_time VARCHAR NOT NULL,
-formula INTEGER,
-milk INTEGER,
+day VARCHAR(10) NOT NULL,
+eat_time VARCHAR(10) NOT NULL,
+formula INTEGER NOT NULL,
+milk INTEGER NOT NULL,
 child_id INTEGER,
 FOREIGN KEY (child_id) REFERENCES child (id)
 );
 
 CREATE TABLE sleep(
 id SERIAL PRIMARY KEY,
-sleep_date VARCHAR NOT NULL,
-sleep_start VARCHAR NOT NULL,
-sleep_end VARCHAR NOT NULL,
+day VARCHAR(10) NOT NULL,
+sleep_start VARCHAR(10) NOT NULL,
+sleep_end VARCHAR(10) NOT NULL,
 child_id INTEGER,
 FOREIGN KEY (child_id) REFERENCES child (id)
 );
