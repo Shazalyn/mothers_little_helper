@@ -99,7 +99,7 @@ app.post('/activity', function(req, res){
   console.log("req.body:", data)
     db.none(
       "INSERT INTO go( go_date, go_time, pee, poo, child_id) VALUES($1, $2, $3, $4, $5)",
-      [data.go_date, data.go_time, data.pee, data.poo, data.child.child_id]
+      [data.go_date, data.go_time, data.pee, data.poo, data.child_id]
     ).then(function(){
         // db.none(
         //   "INSERT INTO eat( go_date, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
