@@ -13,10 +13,10 @@
 <body>
   <nav class="yellow" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Mother's Little Helper</a>
-      <ul class="right hide-on-med-and-down">
+<!--       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
-
+ -->
 <!--       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Navbar Link</a></li>
       </ul>
@@ -26,7 +26,7 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h5 class="header center ">Record [childs name here] activity</h5>
+      <h5 class="header center ">Record [childs name]{{child}}'s activity</h5>
 
 
 
@@ -52,7 +52,7 @@
             <label for="pee">PEE</label>
           </p>
           <p>
-            <input name="poo" type="checkbox" id="poo" checked="checked" />
+            <input name="poo" type="checkbox" id="poo"  />
             <label for="poo">POO</label>
           </p>
       </div>
@@ -93,14 +93,17 @@
         </div>
 
       </div>
+      <button class="btn waves-effect waves-light orange" type="submit" style = "bottom: 10px">log activity
+      </button>
+
+       <button class="btn waves-effect waves-light orange row right" type="submit" style = "bottom: 10px">review activity
+      </button>
 
 
 
 
   </div>
 
-      <button class="btn waves-effect waves-light orange" type="submit">log activity
-      </button>
 
     </form>
   </div>
@@ -111,12 +114,12 @@
 
   <footer class="page-footer yellow">
     <div class="container">
-
-    </div>
     <div class="footer-copyright">
       <div class="container">
       Made by SHAZA &copy 2017 with <a class="yellow darken-3" href="http://materializecss.com">Materialize</a>
       </div>
+
+    </div>
     </div>
   </footer>
 

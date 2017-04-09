@@ -109,7 +109,10 @@ app.post('/activity', function(req, res){
             "INSERT INTO sleep( day, sleep_start, sleep_end, child_id) VALUES($1, $2, $3, $4)",
           [data.day, data.sleep_start, data.sleep_end, data.child_id]
             ).then(function(){
-
+              var child = {
+                kid_name: data
+              };
+console.log(child);
 // .send('User created!');
             res.redirect("/activity")
             })
@@ -120,30 +123,7 @@ app.post('/activity', function(req, res){
     });
 });
 
-// app.post('/activity', function(req, res){
-//   let data = req.body;
-//   console.log("food");
-//   console.log("req.body:", data)
-//     db.none(
-//       "INSERT INTO eat( eat_date, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
-//       [data.eat_date, data.eat_time, data.formula, data.milk, data.child_id]
-//     ).then(function(){
-//         // db.none(
-//         //   "INSERT INTO eat( go_date, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
-//         //   [data.go_date, data.eat_time, data.formula, data.milk,data.child_id]
-//         // ).then(function(){
-//         //    db.none(
-//         //   "INSERT INTO sleep( sleep_date, sleep_start, sleep_end, , child_id) VALUES($1, $2, $3, $4, $5)",
-//         //   [data.sleep_date, data.sleep_start, data.sleep_end, ,data.child_id]
-//         //     ).then(function(){
 
-// // .send('User created!');
-//       res.redirect("/activity")
-//     })
-//     .catch(function(e){
-//       res.send('data not accepted: ' + e);
-//     });
-// });
 app.put('/user', function(req, res){
   db
     .none("UPDATE users SET email = $1 WHERE email = $2",
