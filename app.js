@@ -105,19 +105,21 @@ app.post('/activity', function(req, res){
           "INSERT INTO go( day, go_time, pee, poo, child_id) VALUES($1, $2, $3, $4, $5)",
       [data.day, data.go_time, data.pee, data.poo, data.child_id]
         ).then(function(){
-        //    db.none(
-        //   "INSERT INTO sleep( sleep_date, sleep_start, sleep_end, , child_id) VALUES($1, $2, $3, $4, $5)",
-        //   [data.sleep_date, data.sleep_start, data.sleep_end, ,data.child_id]
-        //     ).then(function(){
+           db.none(
+            "INSERT INTO sleep( day, sleep_start, sleep_end, child_id) VALUES($1, $2, $3, $4)",
+          [data.day, data.sleep_start, data.sleep_end, data.child_id]
+            ).then(function(){
 
 // .send('User created!');
-      res.redirect("/activity")
-    })
-    .catch(function(e){
-      res.send('data not accepted: ' + e);
+            res.redirect("/activity")
+            })
+            .catch(function(e){
+              res.send('data not accepted: ' + e);
+            });
+        });
     });
 });
-});
+
 // app.post('/activity', function(req, res){
 //   let data = req.body;
 //   console.log("food");
