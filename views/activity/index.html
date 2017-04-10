@@ -25,6 +25,7 @@
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
+
       <br><br>
       <h5 class="header center ">Record {{kid_name}}'s activity</h5>
 <h1>{{id}}</h1>
@@ -63,6 +64,8 @@
           <h3>EAT</h3>
           <p>
             <input name="eat_time" id="eatTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
+            <input type="hidden" name="child_id" value="{{id}}">
+            <!-- http://www.echoecho.com/htmlforms07.htm for how to get the child_id to populate -->
             <label for="eatTimepicker">eat time: hour:min am/pm</label>
           </p>
 
