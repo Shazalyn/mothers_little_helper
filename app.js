@@ -62,12 +62,32 @@ app.get('/activity', function(req, res){
   }
 });
 
+app.get('/query', function(req, res){
+  if(req.session.user){
+    let data = {
+      "logged_in": true,
+      "email": req.session.user.email,
+      "kid_name": req.session.user.kid_name,
+      "id": req.session.user.id,
+      "child_id": req.session.user.child_id
+    };
+    console.log("DATA\n", data);
+    res.render('query/index', data);
+  } else {
+    res.render('query/index');
+  }
+});
+
 app.get('/signup', function(req, res){
   res.render('signup/index');
 });
 
 app.get('/review', function(req, res){
   res.render('review/index');
+});
+
+app.get('/query', function(req, res){
+  res.render('query/index');
 });
 
 app.post('/login', function(req, res){
