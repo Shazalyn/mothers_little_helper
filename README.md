@@ -3,14 +3,14 @@ New baby tracking app: GO EAT SLEEP
 
 Track your brand new baby's eating, elimination and sleep.
 
-//////////////////////////////////////////////////////////
+*********************************************************
 User Story
     Have a brand new baby? 
     Sign up for tracking your baby's eating, sleeping and elimination.
     Login to access the activity page
     submit activity under GO EAT SLEEP for your child
     query activity to see and print recaps of activity.
-//////////////////////////////////////////////////////
+*******************************************
 
 MoSCoW
 ********************************
@@ -43,13 +43,14 @@ R-'retrieve' route of '/login'
 U-'update' route of '/activity'
 D-'delete' *i am not looking to delete records as part of this project
 
+*******************************************************
 tables:
 child has an email, a password, and a kid_name
 
-sleep has a day, sleep time start, sleep time end, and foriegn key to connect to child
+    sleep has a day, sleep time start, sleep time end, and foriegn key to connect to child
 
-go has a day, go time, pee, poo
+    go has a day, go time, pee, poo
 
-eat has a day, eat time, formula amt, milk amount
+    eat has a day, eat time, formula amt, milk amount
 
 
