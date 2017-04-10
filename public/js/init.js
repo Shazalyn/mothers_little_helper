@@ -4,6 +4,13 @@
     $('.button-collapse').sideNav();
     $("#timepicker1").timepicker();
 
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+
+  $(document).ready(function() {
+    $('input#input_text, textarea#textarea1').characterCounter();
+  });
 // val goTime = $("#goTimepicker").val();
     // $('.my-datepicker').datepicker([options])
 

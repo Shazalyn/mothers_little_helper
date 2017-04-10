@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>activity</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="yellow" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Mother's Little Helper</a>
+<!--       <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+ -->
+<!--       <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+ --><!--       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+ -->
+
+
+ <div class="row">
+    <form action="/activity" method="post">
+          <div class="input-field inline">
+          <input name= "day" id="day" type="date" class="datepicker">
+<!--             <input id="email" type="email" class="validate">
+ -->            <label for="date" data-error="wrong" data-success="right"></label>
+          </div><br>
+
+
+
+
+        <div class="col s4">
+
+stuff
+
+      </div>
+
+ </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h5 class="header center ">Review [childs name]{{child}}'s activity</h5><br>
+        <form action="/review" method="post">
+
+        </div>
+          <div class="input-field col s12">
+         <div class="row">
+            <select>
+<!--               <option value="" disabled selected>Choose your option</option>
+ -->          <option value="go">Option 1</option>
+              <option value="eat">Option 2</option>
+              <option value="sleep">Option 3</option>
+            </select>
+<!--             <label>Materialize Select</label>
+ -->          </div>
+        </div><br>
+
+        </form>
+
+<!--           <div class="input-field col s12 m6">
+            <select class="icons">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="" data-icon="images/sample-1.jpg" class="circle">GO</option>
+              <option value="" data-icon="images/office.jpg" class="circle">EAT</option>
+              <option value="" data-icon="images/yuna.jpg" class="circle">SLEEP</option>
+            </select>
+            <label>Images in select</label>
+          </div><br>
+ -->
+
+    </div>
+  </div>
+
+  <div class="row">
+      <button class="btn waves-effect waves-light orange" type="submit" style = "bottom: 1px">view activity
+      </button>
+
+       <button class="btn waves-effect waves-light orange row right" type="submit" style = "bottom: 1px">export activity
+      </button>
+
+  </div>
+
+  <footer class="page-footer yellow">
+    <div class="container">
+    <div class="footer-copyright">
+      <div class="container">
+      Made by SHAZA &copy 2017 with <a class="yellow darken-3" href="http://materializecss.com">Materialize</a>
+      </div>
+
+    </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

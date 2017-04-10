@@ -47,11 +47,27 @@ app.get('/login', function(req, res){
 });
 
 app.get('/activity', function(req, res){
-  res.render('activity/index');
+  if(req.session.user){
+    let data = {
+      "logged_in": true,
+      "email": req.session.user.email,
+      "kid_name": req.session.user.kid_name,
+      "id": req.session.user.id,
+      "child_id": req.session.user.child_id
+    };
+    console.log("DATA\n", data);
+    res.render('activity/index', data);
+  } else {
+    res.render('activity/index');
+  }
 });
 
 app.get('/signup', function(req, res){
   res.render('signup/index');
+});
+
+app.get('/review', function(req, res){
+  res.render('review/index');
 });
 
 app.post('/login', function(req, res){
@@ -96,6 +112,7 @@ app.post('/signup', function(req, res){
 app.post('/activity', function(req, res){
   let data = req.body;
   console.log("yeah");
+  console.log("SESSION\n", req.session);
   console.log("req.body:", data)
     db.any(
           "INSERT INTO eat(day, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
@@ -109,10 +126,10 @@ app.post('/activity', function(req, res){
             "INSERT INTO sleep( day, sleep_start, sleep_end, child_id) VALUES($1, $2, $3, $4)",
           [data.day, data.sleep_start, data.sleep_end, data.child_id]
             ).then(function(){
-              var child = {
-                kid_name: data
-              };
-console.log(child);
+              // var child = {
+              //   kid_name: req.body.kid_name
+              // };
+
 // .send('User created!');
             res.redirect("/activity")
             })
