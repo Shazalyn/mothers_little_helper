@@ -24,22 +24,19 @@
 
 <h3>GO</h3>
  <div class="row">
-  <p>Last five</p>
+  <p>Last five recorded activites</p><hr>
+
  {{#data}}
-  <p>{{day}}, {{go_time}}, pee :{{pee}} </p>
+  <p>{{day}}: {{go_time}}, {{#pee}}Pee{{/pee}} {{#poo}}, Poo{{/poo}}</p>
   {{/data}}
-<!--   <h1>{{pee}}</h1>
-  <p>{{poo}}</p>
- -->
+
     <form action="/activity" method="post">
           <div class="input-field inline">
           <input type="hidden" name="child_id" value="{{id}}">
 
 
-<!--           <input name= "day" id="day" type="date" class="datepicker">
-            <input id="email" type="email" class="validate">
-       <label for="date" data-error="wrong" data-success="right"></label>
- -->          </div><br>
+
+          </div><br>
 
 
      <div class="col s4">
