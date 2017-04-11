@@ -93,6 +93,7 @@ app.get('/go', function(req, res){
     res.render('go/index');
   }
 });
+// <<<<<<< HEAD
 // app.get("/go", function(req, res){
 //   db
 //     .any('SELECT * FROM go WHERE child_id = ' + );
@@ -107,6 +108,8 @@ app.get('/go', function(req, res){
 //       res.render("index", view_go);
 //     });
 // });
+// =======
+// >>>>>>> 1a1aefacbc5c11e4cae6f2c671c20571e6dd5dbb
 
 app.get('/signup', function(req, res){
   res.render('signup/index');
@@ -120,10 +123,29 @@ app.get('/query', function(req, res){
   res.render('query/index');
 });
 
+// <<<<<<< HEAD
 // app.get('/go', function(req, res){
 //   res.render('go/index');
 // });
 
+// =======
+// app.get('/go', function(req, res){
+//   res.render('go/index');
+// });
+
+// // app.get("/go", function(req, res){
+// //   db
+// //     .any('SELECT * FROM go WHERE child_id = ' + );
+
+// //     .then(function(data){
+// //       let view_data = {
+// //         title: "Shoebill Shoe bar",
+// //         beers: data
+// //       };
+// //       res.render("index", view_data);
+// //     });
+// // });
+// >>>>>>> 1a1aefacbc5c11e4cae6f2c671c20571e6dd5dbb
 
 
 app.post('/login', function(req, res){
