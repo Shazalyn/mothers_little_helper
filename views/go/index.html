@@ -24,37 +24,41 @@
 
 <h3>GO</h3>
  <div class="row">
-  <p>Get a recap of a specific day</p>
+  <p>Last five</p>
+  <h1>{{time}}</h1>
+  <h1>{{email}}</h1>
+  {{child_id}}
     <form action="/activity" method="post">
           <div class="input-field inline">
           <input type="hidden" name="child_id" value="{{id}}">
 
-          <input name= "day" id="day" type="date" class="datepicker">
-<!--             <input id="email" type="email" class="validate">
- -->       <label for="date" data-error="wrong" data-success="right"></label>
-          </div><br>
+
+<!--           <input name= "day" id="day" type="date" class="datepicker">
+            <input id="email" type="email" class="validate">
+       <label for="date" data-error="wrong" data-success="right"></label>
+ -->          </div><br>
 
 
      <div class="col s4">
 
            <input type="hidden" name="child_id" value="{{id}}">
          <p>
-            <input name="pee" type="checkbox" id="pee"  />
+<!--             <input name="pee" type="checkbox" id="pee"  />
             <label for="pee">PEE</label>
          </p>
 
           <p>
             <input name="poo" type="checkbox" id="poo"  />
             <label for="poo">POO</label>
-          </p>
+ -->          </p>
       </div>
-    </form>
+    </form><br>
               <!-- http://www.echoecho.com/htmlforms07.htm for how to get the child_id to populate -->
   </div>
-      <button class="btn waves-effect waves-light orange" type="submit" style = "bottom: 10px">search activity
+<!--       <button class="btn waves-effect waves-light orange" type="submit" style = "bottom: 10px">search activity
       </button>
-
-      <button class="btn waves-effect waves-light orange row right" type="submit" style = "bottom: 10px"><a href="/query">back
+ -->
+      <button class="btn waves-effect waves-light orange row center" type="submit" style = "bottom: 10px"><a href="/query">back
       <a></button>
 <!--        <button class="btn waves-effect waves-light orange row right" type="submit" style = "bottom: 10px"><a href="/query">query activity</a>
       </button>

@@ -71,7 +71,7 @@ app.get('/query', function(req, res){
       "id": req.session.user.id,
       "child_id": req.session.user.child_id
     };
-    console.log("DATA\n", data);
+    // console.log("DATA\n", data);
     res.render('query/index', data);
   } else {
     res.render('query/index');
@@ -85,7 +85,8 @@ app.get('/go', function(req, res){
       "email": req.session.user.email,
       "kid_name": req.session.user.kid_name,
       "id": req.session.user.id,
-      "child_id": req.session.user.child_id
+      "child_id": req.session.user.child_id,
+      "time": req.session.user.go_time
     };
     console.log("DATA\n", data);
     res.render('go/index', data);
