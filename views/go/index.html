@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>activity</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="yellow" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Mother's Little Helper</a>
+   </div>
+  </nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+
+      <br><br>
+      <h5 class="header center ">Recap {{kid_name}}'s activity</h5>
+
+<h3>GO</h3>
+ <div class="row">
+  <p>Get a recap of a specific day</p>
+    <form action="/activity" method="post">
+          <div class="input-field inline">
+          <input type="hidden" name="child_id" value="{{id}}">
+
+          <input name= "day" id="day" type="date" class="datepicker">
+<!--             <input id="email" type="email" class="validate">
+ -->       <label for="date" data-error="wrong" data-success="right"></label>
+          </div><br>
+
+
+     <div class="col s4">
+
+           <input type="hidden" name="child_id" value="{{id}}">
+         <p>
+            <input name="pee" type="checkbox" id="pee"  />
+            <label for="pee">PEE</label>
+         </p>
+
+          <p>
+            <input name="poo" type="checkbox" id="poo"  />
+            <label for="poo">POO</label>
+          </p>
+      </div>
+    </form>
+              <!-- http://www.echoecho.com/htmlforms07.htm for how to get the child_id to populate -->
+  </div>
+      <button class="btn waves-effect waves-light orange" type="submit" style = "bottom: 10px">search activity
+      </button>
+
+      <button class="btn waves-effect waves-light orange row right" type="submit" style = "bottom: 10px"><a href="/query">back
+      <a></button>
+<!--        <button class="btn waves-effect waves-light orange row right" type="submit" style = "bottom: 10px"><a href="/query">query activity</a>
+      </button>
+ -->
+
+
+
+  </div>
+
+
+    </form>
+  </div>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer yellow">
+    <div class="container">
+    <div class="footer-copyright">
+      <div class="container">
+      Made by SHAZA &copy 2017 with <a class="yellow darken-3" href="http://materializecss.com">Materialize</a>
+      </div>
+
+    </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
