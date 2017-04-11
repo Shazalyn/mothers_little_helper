@@ -78,6 +78,36 @@ app.get('/query', function(req, res){
   }
 });
 
+app.get('/go', function(req, res){
+  if(req.session.user){
+    let data = {
+      "logged_in": true,
+      "email": req.session.user.email,
+      "kid_name": req.session.user.kid_name,
+      "id": req.session.user.id,
+      "child_id": req.session.user.child_id
+    };
+    console.log("DATA\n", data);
+    res.render('go/index', data);
+  } else {
+    res.render('go/index');
+  }
+});
+// app.get("/go", function(req, res){
+//   db
+//     .any('SELECT * FROM go WHERE child_id = ' + );
+
+//     .then(function(data){
+//       let view_go = {
+//         day: "Shoebill Shoe bar",
+//         go_time: data
+           // pee: true,
+           // poo: true,
+//       };
+//       res.render("index", view_go);
+//     });
+// });
+
 app.get('/signup', function(req, res){
   res.render('signup/index');
 });
@@ -89,6 +119,12 @@ app.get('/review', function(req, res){
 app.get('/query', function(req, res){
   res.render('query/index');
 });
+
+// app.get('/go', function(req, res){
+//   res.render('go/index');
+// });
+
+
 
 app.post('/login', function(req, res){
   let data = req.body;
@@ -146,10 +182,6 @@ app.post('/activity', function(req, res){
             "INSERT INTO sleep( day, sleep_start, sleep_end, child_id) VALUES($1, $2, $3, $4)",
           [data.day, data.sleep_start, data.sleep_end, data.child_id]
             ).then(function(){
-              // var child = {
-              //   kid_name: req.body.kid_name
-              // };
-
 // .send('User created!');
             res.redirect("/activity")
             })

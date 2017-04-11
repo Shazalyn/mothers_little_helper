@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>query</title>
+  <title>query index pg</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -23,106 +23,20 @@
       <br><br>
       <h5 class="header center ">Query {{kid_name}}'s activity</h5>
 
- <div class="row">
+         <div class="row">
 
-     <div class="col s4">
+             <div class="col s4">
 
-        <h3>GO</h3>
-<!--                <input name="go_time" id="goTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
-              <label for="goTimepicker">go change time: hour:min am/pm</label>
- -->    <form action="/activity" method="post">
+                <h1><a href="/go">GO</a></h1>
+                <h1><a href="/eat">EAT</a></h1>
+                <h1><a href="/sleep">SLEEP</a></h1>
+                <input type="hidden" name="child_id" value="{{id}}">
+                 <!-- http://www.echoecho.com/htmlforms07.htm for how to get the child_id to populate -->
+             </div><br>
 
-          <p>
-      <div class="input-field inline">
-        <input name= "day" id="day" type="date" class="datepicker">
-          <label for="date" data-error="wrong" data-success="right">
-          </label>
-      </div><br>
-
-          </p>
-          <p>
-            <input name="pee" type="checkbox" id="pee"  />
-            <label for="pee">PEE</label>
-          </p>
-          <p>
-            <input name="poo" type="checkbox" id="poo"  />
-            <label for="poo">POO</label>
-          </p>
-      </div>
-
-        <div class="col s4">
-
-          <h3>EAT</h3>
-          <p>
-                <div class="input-field inline">
-        <input name= "day" id="day" type="date" class="datepicker">
-          <label for="date" data-error="wrong" data-success="right">
-          </label>
-      </div><br>
-
-<!--             <input name="eat_time" id="eatTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
- -->            <input type="hidden" name="child_id" value="{{id}}">
-            <!-- http://www.echoecho.com/htmlforms07.htm for how to get the child_id to populate -->
-<!--             <label for="eatTimepicker">eat time: hour:min am/pm</label>
- -->          </p>
-
-         <p>
-            <div class="row">
-<!--               <input name="formula" id="input_formula"
- -->            <input name="formula" type="checkbox" id="input_formula"  />
-            <label for="input_formula">formula</label>
-
-            </div>
-          </p>
-
-          <p>
-            <div class="row">
-            <input name="milk" type="checkbox"  id="input_milk"/>
-            <label for="input_milk">milk</label>
-<!--               <label for="input_milk">milk amount</label>
- -->         </div>
-          </p>
         </div>
-
-        <div class="col s4">
-          <h3>SLEEP</h3>
-          <p>
-            <div class="input-field inline">
-           <input name= "day" id="day" type="date" class="datepicker">
-            <label for="date" data-error="wrong" data-success="right">
-            </label>
-      </div><br>
-
-          </p>
-<!--           <input name="sleep_start" type="time" class="timepicker" style="margin-bottom: 0px";>
- --><!--               <label for="timepicker">sleep start: hour:min am/pm</label>
- -->
-<!--               <input name="sleep_end" id="timepicker2" type="time" class="timepicker" style="margin-bottom: 0px">
- --><!--               <label for="timepicker">sleep finish: hour:min am/pm</label>
- --><!--           <div class="datepicker-here" data-timepicker="true" data-time-format='hh:ii aa'></div>
- -->
-        </div>
-
-      </div>
-      <button class="btn waves-effect waves-light orange" type="submit" style = "bottom: 10px">query activity
-      </button>
-
-<!--        <button class="btn waves-effect waves-light orange row right" type="submit" style = "bottom: 10px">review activity
-      </button>
- -->
-
-
-
+    </div><br>
   </div>
-
-
-    </form>
-  </div>
-
-    </div>
-  </div>
-
-
   <footer class="page-footer yellow">
     <div class="container">
     <div class="footer-copyright">
@@ -135,7 +49,7 @@
   </footer>
 
 
-  <!--  Scripts-->
+  <!--  Scripts
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
