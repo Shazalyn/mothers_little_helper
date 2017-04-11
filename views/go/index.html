@@ -25,9 +25,12 @@
 <h3>GO</h3>
  <div class="row">
   <p>Last five</p>
-  <h1>{{time}}</h1>
-  <h1>{{email}}</h1>
-  {{child_id}}
+ {{#data}}
+  <p>{{day}}, {{go_time}}, pee :{{pee}} </p>
+  {{/data}}
+<!--   <h1>{{pee}}</h1>
+  <p>{{poo}}</p>
+ -->
     <form action="/activity" method="post">
           <div class="input-field inline">
           <input type="hidden" name="child_id" value="{{id}}">

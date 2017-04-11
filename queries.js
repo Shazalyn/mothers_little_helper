@@ -8,6 +8,8 @@ SELECT * FROM go WHERE child_id ='4';
 
 SELECT * FROM go WHERE child_id ='3' AND poo = true;
 SELECT * FROM sleep WHERE child_id ='3';
+SELECT * FROM go WHERE child_id =' + {{id}};
+
 
 SELECT * FROM eat WHERE child_id ='3';
 
