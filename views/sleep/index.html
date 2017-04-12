@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>go</title>
+  <title>sleep</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,17 +15,15 @@
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Mother's Little Helper</a>
 
      <ul class="right hide-on-med-and-down">
-        <li><a href="/activity">Activity</a></li>
         <li><a href="/go">GO recap</a></li>
         <li><a href="/eat">EAT recap</a></li>
         <li><a href="/sleep">SLEEP recap</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="/activity">Activity</a></li>
         <li><a href="/go">GO recap</a></li>
         <li><a href="/eat">EAT recap</a></li>
-        <li><a href="sleep">SLEEP recap</a></li>
+        <li><a href="/sleep">SLEEP recap</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 
@@ -36,23 +34,23 @@
     <div class="container">
 
       <br><br>
-      <h5 class="header center ">Recap {{kid_name}}'s activity</h5>
+      <h5 class="header center ">Recap {{kidsleep_name}}'s activity</h5>
 
-<h2>GO</h2>
+<h3>SLEEP</h3>
  <div class="row">
   <p>Last five recorded activites</p><hr>
 
- {{#data}}
-  <p>{{day}} Time: {{go_time}}{{#pee}}, Pee{{/pee}}{{#poo}}, Poo{{/poo}}</p>
-  {{/data}}
+     {{#data}}
+        <p>{{day}}: Sleep Start {{sleep_start}}, Sleep End {{sleep_end}}</p>
+      {{/data}}
 
     <form action="/activity" method="post">
-          <div class="input-field inline">
+        <div class="input-field inline">
           <input type="hidden" name="child_id" value="{{id}}">
 
 
 
-          </div><br>
+        </div><br>
 
 
      <div class="col s4">

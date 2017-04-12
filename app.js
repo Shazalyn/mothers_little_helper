@@ -97,6 +97,54 @@ app.get('/go', function(req, res){
       res.render('go/index');
     }
 });
+
+// app.get('/eat', function(req, res){
+//   res.render('eat/index');
+// });
+
+app.get('/eat', function(req, res){
+  if(req.session.user) {
+  let id = req.session.user.id
+  console.log("ID\n", id)
+  db.any('SELECT * FROM eat WHERE child_id = $1 ORDER BY day DESC LIMIT 5', id)
+  .then(function(data){
+
+      var eat_recap = {
+      "kideat_name": req.session.user.kid_name,
+      "id": req.session.user.id,
+      'data': data
+      }
+    console.log("HI EAT DATA\n", eat_recap);
+     res.render('eat/index', eat_recap);
+   })
+} else {
+      res.render('eat/index');
+    }
+});
+
+// app.get('/sleep', function(req, res){
+//   res.render('sleep/index');
+// });
+
+app.get('/sleep', function(req, res){
+  if(req.session.user) {
+  let id = req.session.user.id
+  console.log("ID\n", id)
+  db.any('SELECT * FROM sleep WHERE child_id = $1 ORDER BY day DESC LIMIT 5', id)
+  .then(function(data){
+
+      var sleep_recap = {
+      "kidsleep_name": req.session.user.kid_name,
+      "id": req.session.user.id,
+      'data': data
+      }
+    console.log("HI sleep DATA\n", sleep_recap);
+     res.render('sleep/index', sleep_recap);
+   })
+} else {
+      res.render('sleep/index');
+    }
+});
 // app.get('/go', function(req, res){
 //   if(req.session.user){
 //     let data = {
