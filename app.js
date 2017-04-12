@@ -105,7 +105,7 @@ app.get('/go', function(req, res){
 app.get('/eat', function(req, res){
   if(req.session.user) {
   let id = req.session.user.id
-  console.log("ID\n", id)
+  // console.log("ID\n", id)
   db.any('SELECT * FROM eat WHERE child_id = $1 ORDER BY day DESC LIMIT 5', id)
   .then(function(data){
 
@@ -114,7 +114,7 @@ app.get('/eat', function(req, res){
       "id": req.session.user.id,
       'data': data
       }
-    console.log("HI EAT DATA\n", eat_recap);
+    // console.log("HI EAT DATA\n", eat_recap);
      res.render('eat/index', eat_recap);
    })
 } else {
@@ -129,7 +129,7 @@ app.get('/eat', function(req, res){
 app.get('/sleep', function(req, res){
   if(req.session.user) {
   let id = req.session.user.id
-  console.log("ID\n", id)
+  // console.log("ID\n", id)
   db.any('SELECT * FROM sleep WHERE child_id = $1 ORDER BY day DESC LIMIT 5', id)
   .then(function(data){
 
@@ -138,46 +138,13 @@ app.get('/sleep', function(req, res){
       "id": req.session.user.id,
       'data': data
       }
-    console.log("HI sleep DATA\n", sleep_recap);
+    // console.log("HI sleep DATA\n", sleep_recap);
      res.render('sleep/index', sleep_recap);
    })
 } else {
       res.render('sleep/index');
     }
 });
-// app.get('/go', function(req, res){
-//   if(req.session.user){
-//     let data = {
-//       "logged_in": true,
-//       "email": req.session.user.email,
-//       "kid_name": req.session.user.kid_name,
-//       "id": req.session.user.id,
-//       "child_id": req.session.user.child_id,
-//       "time": req.session.user.go_time
-//     };
-//     console.log("DATA\n", data);
-//     res.render('go/index', data);
-//   } else {
-//     res.render('go/index');
-//   }
-// });
-// <<<<<<< HEAD
-// app.get("/go", function(req, res){
-//   db
-//     .any('SELECT * FROM go WHERE child_id = ' + );
-
-//     .then(function(data){
-//       let view_go = {
-//         day: "Shoebill Shoe bar",
-//         go_time: data
-           // pee: true,
-           // poo: true,
-//       };
-//       res.render("index", view_go);
-//     });
-// });
-// =======
-// >>>>>>> 1a1aefacbc5c11e4cae6f2c671c20571e6dd5dbb
 
 app.get('/signup', function(req, res){
   res.render('signup/index');
@@ -190,30 +157,6 @@ app.get('/review', function(req, res){
 app.get('/query', function(req, res){
   res.render('query/index');
 });
-
-// <<<<<<< HEAD
-// app.get('/go', function(req, res){
-//   res.render('go/index');
-// });
-
-// =======
-// app.get('/go', function(req, res){
-//   res.render('go/index');
-// });
-
-// // app.get("/go", function(req, res){
-// //   db
-// //     .any('SELECT * FROM go WHERE child_id = ' + );
-
-// //     .then(function(data){
-// //       let view_data = {
-// //         title: "Shoebill Shoe bar",
-// //         beers: data
-// //       };
-// //       res.render("index", view_data);
-// //     });
-// // });
-// >>>>>>> 1a1aefacbc5c11e4cae6f2c671c20571e6dd5dbb
 
 
 app.post('/login', function(req, res){
