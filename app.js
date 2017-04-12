@@ -9,6 +9,7 @@ const bodyParser = require("body-parser");
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 const salt = bcrypt.genSalt(10);
+// var airDatepicker = require("air-datepicker")
 
 
 app.engine('html', mustacheExpress());
@@ -55,7 +56,7 @@ app.get('/activity', function(req, res){
       "id": req.session.user.id,
       "child_id": req.session.user.child_id
     };
-    console.log("DATA\n", data);
+    // console.log("DATA\n", data);
     res.render('activity/index', data);
   } else {
     res.render('activity/index');
@@ -90,7 +91,7 @@ app.get('/go', function(req, res){
       "id": req.session.user.id,
       'data': data
       }
-    console.log("DATA\n", go_recap);
+    // console.log("DATA\n", go_recap);
      res.render('go/index', go_recap);
    })
 } else {
@@ -182,7 +183,7 @@ app.post('/login', function(req, res){
 
 app.post('/signup', function(req, res){
   let data = req.body;
-  console.log("hey");
+  // console.log("hey");
   bcrypt
     .hash(data.password, 10, function(err, hash){
       db.none(
@@ -201,8 +202,8 @@ app.post('/signup', function(req, res){
 app.post('/activity', function(req, res){
   let data = req.body;
   console.log("yeah");
-  console.log("SESSION\n", req.session);
-  console.log("req.body:", data)
+  // console.log("SESSION\n", req.session);
+  // console.log("req.body:", data)
     db.any(
           "INSERT INTO eat(day, eat_time, formula, milk, child_id) VALUES($1, $2, $3, $4, $5)",
           [data.day, data.eat_time, data.formula, data.milk,data.child_id]
