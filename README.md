@@ -1,6 +1,6 @@
-# mothers_little_helper
-New baby tracking app: GO EAT SLEEP
 
+New baby tracking app: GO EAT SLEEP
+Mothers Little Helper
 Track your brand new baby's eating, elimination and sleep.
 
 *********************************************************
@@ -37,7 +37,7 @@ Would have:
     Meme and coloring options
     Customize with photo of child
 ******************************************************
-CRUD
+CRUD:
 C-'create' route of '/signup'
 R-'retrieve' route of '/login'
 U-'update' route of '/activity'
