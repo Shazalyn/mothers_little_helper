@@ -9,9 +9,13 @@ Track your brand new baby's eating, elimination and sleep.
 *********************************************************
 User Story
     Have a brand new baby? 
+    
     Sign up for tracking your baby's eating, sleeping and elimination.
+    
     Login to access the activity page
+    
     submit activity under GO EAT SLEEP for your child
+    
     query activity to see and print recaps of activity.
 *******************************************
 
@@ -19,11 +23,14 @@ MoSCoW
 ********************************
 Must haves:
     tracking for eating, sleeping and elimination (go);
+    
     api to export info to external page(.csv)
 
 Should have:
     indicate R or L on milk
+    
     timer option for sleep and feeding
+    
     write in line for poo description
     
 
