@@ -2,6 +2,7 @@
 New baby tracking app: GO EAT SLEEP
 Mothers Little Helper
 Track your brand new baby's eating, elimination and sleep.
+![project2](https://github.com/Shazalyn/mothers_little_helper/blob/master/images/carterJason.png)
 
 *********************************************************
 User Story
