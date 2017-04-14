@@ -8,6 +8,7 @@ Track your brand new baby's eating, elimination and sleep.
 
 *********************************************************
 User Story
+
     Have a brand new baby? 
     
     Sign up for tracking your baby's eating, sleeping and elimination.
@@ -27,6 +28,7 @@ Must haves:
     api to export info to external page(.csv)
 
 Should have:
+
     indicate R or L on milk
     
     timer option for sleep and feeding
@@ -35,17 +37,27 @@ Should have:
     
 
 Could have:
+
     api link to order supplies
+    
     graphing of trends
+    
     multiple births(TWINS!)
+    
     Temperature tracker
+    
     baby wieght tracker to compare to an API of baby % stats
+    
     Sick baby tracking
+    
     parent name, stats(dob, etc)
 
 Would have:
+
     Meme and coloring options
+    
     Customize with photo of child
+    
 ******************************************************
 CRUD:
 C-'create' route of '/signup'
@@ -55,6 +67,7 @@ D-'delete' *i am not looking to delete records as part of this project
 
 *******************************************************
 tables:
+
 child has an email, a password, and a kid_name
 
     sleep has a day, sleep time start, sleep time end, and foriegn key to connect to child
