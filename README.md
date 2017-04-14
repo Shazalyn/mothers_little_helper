@@ -8,6 +8,7 @@ Track your brand new baby's eating, elimination and sleep.
 
 *********************************************************
 User Story
+
 Have a brand new baby? 
     
    Sign up for tracking your baby's eating, sleeping and elimination.
@@ -23,30 +24,30 @@ MoSCoW
 ********************************
 Must haves:
 
-   tracking for eating, sleeping and elimination (go);
+    tracking for eating, sleeping and elimination (go);
     
-   api to export info to external page(.csv)
+    api to export info to external page(.csv)
 
 Should have:
 
-   indicate R or L on milk
+    indicate R or L on milk
     
-   timer option for sleep and feeding
+    timer option for sleep and feeding
     
-   write in line for poo description
+    write in line for poo description
     
 
 Could have:
 
-   api link to order supplies
+    api link to order supplies
     
-   graphing of trends
+    graphing of trends
     
-   multiple births(TWINS!)
+    multiple births(TWINS!)
     
-   temperature tracker
+    temperature tracker
     
-   baby wieght tracker to compare to an API of baby % stats
+    baby wieght tracker to compare to an API of baby % stats
     
     sick baby tracking
     
@@ -54,9 +55,9 @@ Could have:
 
 Would have:
 
-   Meme and coloring options
+    Meme and coloring options
     
-   Customize with photo of child
+    Customize with photo of child
     
  *************************************
  Wire Frame in Xd:
