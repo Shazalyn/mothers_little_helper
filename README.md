@@ -58,6 +58,7 @@ Would have:
     
     Customize with photo of child
     
+    
 ******************************************************
 CRUD:
 
@@ -79,5 +80,6 @@ child has an email, a password, and a kid_name
     go has a day, go time, pee, poo
 
     eat has a day, eat time, formula amt, milk amount
+    
 https://github.com/Shazalyn/mothers_little_helper/blob/master/images/IMG_20170413_150934.jpg
 
