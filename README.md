@@ -19,8 +19,8 @@ Must haves:
     api to export info to external page(.csv)
 
 Should have:
-    indicate R or L on milk
-    timer option for sleep and feeding
+    indicate R or L on milk,
+    timer option for sleep and feeding,
     write in line for poo description
     
 

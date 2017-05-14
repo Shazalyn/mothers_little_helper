@@ -37,6 +37,11 @@ element.style {
   border: 2px solid yellow;
 }
 
+#input_milk{
+  border: 2px dotted red;
+
+}
+
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
   background-color: yellow;

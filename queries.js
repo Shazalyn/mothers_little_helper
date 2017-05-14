@@ -1,3 +1,5 @@
+  // my tests for queries in js to the data base
+
      <input type="hidden" name="child_id" value="{{id}}">
 
 INSERT INTO eat(day, eat_time, formula, milk) VALUES('04/05/2017', '12:01', '10', '2'),

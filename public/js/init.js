@@ -15,7 +15,9 @@
 
 // var compareName = data.child.kid_name;
 // var getNameInfo = function(compareName){
-
+$(input#input_milk).on("focus", function(){
+  $(checkbox#right).show();
+});
 
 // $.ajax({
 //   url: "https://www.behindthename.com/api/lookup.php?name=" + compareName +"&key=sh111457",
