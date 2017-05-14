@@ -34,10 +34,10 @@
   });
 
   }); // end of document ready
-// $("input#input_milk").on("focus", function(){
-//   console.log("milk focus");
-//   $(radio#radio_right).show();
-// });
+$("input#input_milk").on("focus", function(){
+  console.log("milk focus");
+  $(radio#radio_right).show();
+});
 
 
 })(jQuery); // end of jQuery name space

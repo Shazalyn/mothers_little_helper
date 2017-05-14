@@ -53,10 +53,10 @@ element.style {
 
 }
 
-[type="radio"]:checked + label:after,
-[type="radio"].with-gap:checked + label:after {
-  background-color: orange;
-}
+// [type="radio"]:checked + label:after,
+// [type="radio"].with-gap:checked + label:after {
+//   background-color: orange;
+// }
 
 .page-footer {
   padding-top: 0px;
