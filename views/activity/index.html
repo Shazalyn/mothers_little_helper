@@ -29,12 +29,12 @@
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
  </div>
   </nav>
+<main>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
 
       <br><br>
       <h5 class="header center ">Record {{kid_name}}'s activity</h5>
-
  <div class="row">
     <form action="/activity" method="post">
           <div class="input-field inline">
@@ -82,12 +82,14 @@
             <div class="row">
               <input  name ="milk" id="input_milk" type="text" data-length="4" style="width: 50px;">
               <label for="input_milk">milk oz</label>
+          <form action="milk">
             <p>
-            <input name="left" type="checkbox" id="left"  />
-            <label for="left">LEFT</label>
-            <input name="right" type="checkbox" id="right"  />
-            <label for="right">RIGHT</label>
-          </p>
+              <input name="left" type="radio" id="radio"  />
+              <label for="left">LEFT </label>
+              <input name="right" type="radio" id="radio"  />
+              <label for="right">RIGHT</label>
+            </p>
+          </form>
             </div>
           </p>
         </div>
@@ -122,7 +124,8 @@
 
     </div>
   </div>
-
+</main>
+</body>
 
   <footer class="page-footer yellow">
     <div class="container">

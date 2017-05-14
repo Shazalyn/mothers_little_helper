@@ -5,6 +5,17 @@
  *
  * Made By MaterializeCSS.com
  */
+// sticky footer
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+// end sticky footer
 
 .icon-block {
   padding: 0 15px;
@@ -33,8 +44,8 @@ element.style {
 */
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:before,
-[type="radio"].with-gap:checked + label:after {
-  border: 2px solid yellow;
+[type="radio"].with-gap:checked + label:before{
+  border: 2px solid black;
 }
 
 #input_milk{
@@ -44,7 +55,8 @@ element.style {
 
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
-  background-color: yellow;
+  background-color: orange;
+}
 
 .page-footer {
   padding-top: 0px;
