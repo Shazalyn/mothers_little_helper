@@ -25,10 +25,10 @@
     background: #ffeb3b;
   }
   80% {
-    background: #ff9800;
+    background: orange;
   }
   100% {
-    background: orange;
+    background: #ff9800;
   }
 }
 // .cls
