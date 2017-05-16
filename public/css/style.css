@@ -59,6 +59,7 @@ element.style {
 .page-footer {
   padding-top: 0px;
   background-color: #f9a825;
+  color: white;
 }
 [type="checkbox"].filled-in:checked + label:after {
   top: 0;
