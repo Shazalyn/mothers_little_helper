@@ -6,6 +6,7 @@
  * Made By MaterializeCSS.com
  */
 
+
 .icon-block {
   padding: 0 15px;
 }
@@ -13,10 +14,24 @@
 	font-size: inherit;
 }
 
+.color-change-3x {
+  -webkit-animation: color-change-3x 4s linear infinite alternate both;
+  -moz-animation: color-change-3x 4s linear infinite alternate both;
+  animation: color-change-3x 4s linear infinite alternate both;
+}
 
-/*:hov
-
-.cls*/
+@keyframes color-change-3x {
+  0% {
+    background: #ffeb3b;
+  }
+  80% {
+    background: #ff9800;
+  }
+  100% {
+    background: orange;
+  }
+}
+// .cls
 /*line above formula amount*/
 element.style {
     margin-bottom: 0px;
