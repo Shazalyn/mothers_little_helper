@@ -6,7 +6,12 @@
  * Made By MaterializeCSS.com
  */
 
-
+#giraffe {
+  background: blue;
+  border: 2px dotted red;
+  height: 232px;
+  width: 200px;
+}
 .icon-block {
   padding: 0 15px;
 }
