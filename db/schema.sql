@@ -18,6 +18,7 @@ day VARCHAR(10) NOT NULL,
 go_time VARCHAR(10) NOT NULL,
 pee boolean,
 poo boolean,
+poo_descr VARCHAR(25),
 child_id INTEGER,
 FOREIGN KEY (child_id) REFERENCES child (id)
 );
@@ -28,6 +29,8 @@ day VARCHAR(10) NOT NULL,
 eat_time VARCHAR(10) NOT NULL,
 formula INTEGER NOT NULL,
 milk INTEGER NOT NULL,
+left boolean,
+right boolean,
 child_id INTEGER,
 FOREIGN KEY (child_id) REFERENCES child (id)
 );
