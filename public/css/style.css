@@ -10,6 +10,7 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background: url(img/giraffe.jpg);
   }
 
   main {
@@ -18,7 +19,7 @@
 
 
 #giraffe {
-  background: blue;
+  // background: url(img/giraffe.jpg);
   border: 2px dotted red;
   height: 232px;
   width: 200px;
