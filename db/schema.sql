@@ -29,8 +29,8 @@ day VARCHAR(10) NOT NULL,
 eat_time VARCHAR(10) NOT NULL,
 formula INTEGER NOT NULL,
 milk INTEGER NOT NULL,
-left boolean,
-right boolean,
+left_milk boolean,
+right_milk boolean,
 child_id INTEGER,
 FOREIGN KEY (child_id) REFERENCES child (id)
 );

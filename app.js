@@ -205,11 +205,11 @@ app.post('/activity', function(req, res){
   // console.log("SESSION\n", req.session);
   // console.log("req.body:", data)
     db.any(
-          "INSERT INTO eat(day, eat_time, formula, milk, left, right, child_id) VALUES($1, $2, $3, $4, $5, $6, $7)",
+          "INSERT INTO eat(day, eat_time, formula, milk, left_milk, right_milk, child_id) VALUES($1, $2, $3, $4, $5, $6, $7)",
           [data.day, data.eat_time, data.formula, data.milk, data.left, data.right, data.child_id]
     ).then(function(){
         db.none(
-          "INSERT INTO go( day, go_time, pee, poo, poo_descr, child_id) VALUES($1, $2, $3, $4, $5)",
+          "INSERT INTO go( day, go_time, pee, poo, poo_descr, child_id) VALUES($1, $2, $3, $4, $5, $6)",
       [data.day, data.go_time, data.pee, data.poo, data.poo_descr, data.child_id]
         ).then(function(){
            db.none(
