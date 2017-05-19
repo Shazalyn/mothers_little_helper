@@ -2,11 +2,11 @@
   $(function(){
     console.log("js is running");
     $('.button-collapse').sideNav();
-    $("#timepicker1").timepicker();
+    // $("#timepicker1").timepicker();
     $('select').material_select();
     $('input#input_text, textarea#textarea1').characterCounter();
     var goTime = $("#goTimepicker").val();
-    $('.my-datepicker').datepicker([options]);
+    // $('.my-datepicker').datepicker([options]);
   // $(document).ready(function() {
   // });
 

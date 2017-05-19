@@ -22,31 +22,42 @@
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="/activity">Log Activity</a></li>
-        <li><a href="/go">GO recap</a></li>
-        <li><a href="/eat">EAT recap</a></li>
-        <li><a href="/sleep">SLEEP recap</a></li>
+
+        <li><a href="/go"><img src="http://localhost:3017/images/diaper_pin.png" alt="diaper pin icon"></a></li>
+
+        <li><a href="/eat"><img src="http://localhost:3017/images/bottle.png" alt="bottle icon"></a></li>
+
+        <li><a href="/sleep"><img src="http://localhost:3017/images/sleep.png" alt="night time icon"></a></li>
       </ul>
+
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
  </div>
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
 
-      <br><br>
-      <h5 class="header center ">Record {{kid_name}}'s activity</h5>
+      <br>
+      <h5 class="header center"
+    style="margin-top: 0px;
+    margin-bottom: 0px;"
+ ">Record {{kid_name}}'s activity</h5>
 
- <div class="row">
+ <div class="row" style="margin-bottom: 0px;"
+>
     <form action="/activity" method="post">
           <div class="input-field inline">
           <input name= "day" id="day" type="date" class="datepicker">
 <!--             <input id="email" type="email" class="validate">
  -->       <label for="date" data-error="wrong" data-success="right"></label>
-          </div><br>
+          </div>
+          <br>
 
 
      <div class="col s4">
 
-        <h3>GO</h3>
+        <h4><a href="/go">
+          <img src="http://localhost:3017/images/diaper_pin.png" alt="diaper pin icon"></a>GO
+        </h4>
           <p>
                <input name="go_time" id="goTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
               <label for="goTimepicker">go change time: hour:min am/pm</label>
@@ -68,7 +79,7 @@
 
         <div class="col s4">
 
-          <h3>EAT</h3>
+          <h4><a href="/eat"><img src="http://localhost:3017/images/bottle.png" alt="bottle icon"></a>EAT</h4>
           <p>
             <input name="eat_time" id="eatTimepicker" type="time" class="timepicker" style="margin-bottom: 0px">
             <input type="hidden" name="child_id" value="{{id}}">
@@ -92,7 +103,7 @@
             </div>
           </p>
          <p>
-            <div class="row input-field">
+            <div class="row input-field" style="margin-bottom: 0px;">
               <input name="formula" id="input_formula" type="text" data-length="4">
               <label for="input_formula">formula oz</label>
             </div>
@@ -100,7 +111,7 @@
         </div>
 
         <div class="col s4">
-          <h3>SLEEP</h3>
+          <h4><a href="/sleep"><img src="http://localhost:3017/images/sleep.png" alt="night time icon"></a>SLEEP</h4>
 <!--             <input id="timepicker1">
  -->            <input name="sleep_start" type="time" class="timepicker" style="margin-bottom: 0px";>
               <label for="timepicker">sleep start: hour:min am/pm</label>
