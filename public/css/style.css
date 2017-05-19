@@ -26,6 +26,16 @@
   padding: 10px;
   clear: both;
 }
+
+.giraffe_rt {
+  // background: url(img/giraffe.png);
+  // border: 2px dotted red;
+  height: 232px;
+  width: 200px;
+  padding: 10px;
+  clear: both;
+}
+
 .icon-block {
   padding: 0 15px;
 }
