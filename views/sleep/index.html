@@ -42,64 +42,27 @@
       <br><br>
       <h5 class="header center ">Recap {{kidsleep_name}}'s activity</h5>
 
-    <h2>SLEEP
-      <img src="http://localhost:3017/images/sleep.png" alt="night time icon">
+    <h2><img src="http://localhost:3017/images/sleep.png" alt="night time icon">SLEEP
     </h2>
- <div class="row">
-  <p>Last five recorded activites</p><hr>
 
-     {{#data}}
-        <p>{{day}}: Sleep Start {{sleep_start}}, Sleep End {{sleep_end}}</p>
-      {{/data}}
+       <div class="row">
+        <p>Last five recorded activites</p><hr>
 
-    <form action="/activity" method="post">
-        <div class="input-field inline">
-          <input type="hidden" name="child_id" value="{{id}}">
-
-
-
-        </div><br>
-
-
-     <div class="col s4">
-
-           <input type="hidden" name="child_id" value="{{id}}">
-         <p>
-<!--             <input name="pee" type="checkbox" id="pee"  />
-            <label for="pee">PEE</label>
-         </p>
-
-          <p>
-            <input name="poo" type="checkbox" id="poo"  />
-            <label for="poo">POO</label>
- -->          </p>
-      </div>
-    </form><br>
-              <!-- http://www.echoecho.com/htmlforms07.htm for how to get the child_id to populate -->
-  </div>
-<!--       <button class="btn waves-effect waves-light orange" type="submit" style = "bottom: 10px">search activity
-      </button>
- -->
-<!--        <button class="btn waves-effect waves-light orange row right" type="submit" style = "bottom: 10px"><a href="/query">query activity</a>
-      </button>
- -->
-
-
-
-  </div>
-
-
-    </form>
-    <div class="container">
-
-      <button class="btn waves-effect waves-light orange row right" type="submit"><a href="/query">back
-      <a></button>
+           {{#data}}
+              <p>{{day}}: Sleep Start {{sleep_start}}, Sleep End {{sleep_end}}</p>
+            {{/data}}
+        </div>
 
     </div>
   </div>
+<br>
+    <div class="row center">
+
+        <button class="btn waves-effect waves-light orange row right" type="submit"><a href="/query">recap<a>
+        </button>
 
     </div>
-  </div>
+
 
 
   <footer class="page-footer yellow">
